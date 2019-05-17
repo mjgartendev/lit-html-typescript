@@ -1,7 +1,6 @@
 html, body {
-  padding: 0; margin: 0;
+  padding: 0; margin: 0; 
 }
-*, *:before, *:after{ box-sizing: border-box}
 #app {
   height: 100vh;
   display: grid;
@@ -38,20 +37,20 @@ h1, h2 {
 .left {grid-area: left}
 .main {grid-area: main;}
 .top, .bottom {
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   outline: 1px solid white;
   padding: 0 1rem;
+  background: var(--lighter)
 }
 .left, .right {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   outline: 1px solid white;
-  padding: 1rem 0;
+  padding: var(--sm);
 }
 .left button, 
 .right button {
@@ -74,7 +73,7 @@ h1, h2 {
   font-size: 1.1rem;
 }
 a{text-decoration: none; color: var(--primary)}
-button, a.button {
+.button, a.button {
   margin: 0;
   font-weight: bold;
   background: var(--light);
@@ -84,7 +83,7 @@ button, a.button {
   border-radius: 3px;
   text-decoration: none;
 }
-button:hover, a:hover {
+.button:hover, a:hover {
   background: var(--primary);
   color: var(--lightest);
   cursor: pointer;

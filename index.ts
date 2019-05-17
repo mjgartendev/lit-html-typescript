@@ -74,7 +74,7 @@ const AppShell = (data) =>(
         ${data.state.user.loggedIn
           ? html`
               <span>Welcome, ${data.state.user.name}!</span>
-              <button class="button">Log Out</button>
+              <button class="button" onclick="${data.state.user.loggedIn = false}">Log Out</button>
             `
           : html`
               <label for=username" >Name</label>
@@ -92,24 +92,24 @@ const AppShell = (data) =>(
   <aside class="left">
     <header>left area</header>
     <nav class="vertical">
-      <button>Link</button>
-      <button>Link</button>
-      <button>Link</button>
+      <button class="button">Link</button>
+      <button class="button">Link</button>
+      <button class="button">Link</button>
     </nav>      
     </footer>footer</footer>
   </aside>
 
   <section class="main">
     <nav class="breadcrumbs">
-      <a class=breadcrumb">home /</li>
-      <a class=breadcrumb">page 1 /</li>
+      <a class=breadcrumb">home /</a>
+      <a class=breadcrumb">page 1 /</a>
     </nav>
     <section class="content">
       <h1>Page Title</h1>
       <h2>Page Subtitle</h2>
       <p>Some Content</p>
     </section>
-  </main>
+  </section>
 
   <aside class="right">
     <header>right content</header>
@@ -123,12 +123,12 @@ const AppShell = (data) =>(
   </aside>
 
   <footer class="bottom">
-    <section class="buttons">
+    <div class="buttons">
       <button class="button">Tool 1</button>
       <button class="button">Tool 1</button>
       <button class="button">Tool 1</button>
       <button class="button">Tool 1</button>
-    </section>
+    </div>
   </footer>
 `);
 
