@@ -1,0 +1,91 @@
+html, body {
+  padding: 0; margin: 0;
+}
+*, *:before, *:after{ box-sizing: border-box}
+#app {
+  height: 100vh;
+  display: grid;
+  background: var(--lighter);
+  --lightest: #fff;
+  --lighter: #ddd;
+  --light: #aaa;
+  --base: #999;
+  --dark: #777;
+  --darker: #444;
+  --darkest: #111;
+  --primary: seagreen;
+  --orientation: row;
+  --radius: 4px;
+  --border: 1px solid var(--lighter);
+  --shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  --xs: 2px;
+  --sm: 4px;
+  --md: 8px;
+  --lg: 16px;
+  --xl: 32px;
+  grid-template-areas: 'top top top' 
+                       'left main right' 
+                       'bottom bottom bottom';
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+}
+h1, h2 {
+  font-family: Lato;
+}
+.top {grid-area: top;}
+.right {grid-area: right;}
+.bottom {grid-area: bottom;}
+.left {grid-area: left}
+.main {grid-area: main;}
+.top, .bottom {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: 1px solid white;
+  padding: 0 1rem;
+}
+.left, .right {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  outline: 1px solid white;
+  padding: 1rem 0;
+}
+.left button, 
+.right button {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  height: 100%;
+  background: white;
+  color: var(--darkest);
+}
+.content > h1, 
+.content > h2 {
+  color: var(--darker);
+  margin: .3rem 0 0 0;
+}
+.content > h2 {
+  color: var(--dark);
+  margin: .3rem 0 0 0;
+  font-size: 1.1rem;
+}
+a{text-decoration: none; color: var(--primary)}
+button, a.button {
+  margin: 0;
+  font-weight: bold;
+  background: var(--light);
+  color: var(--primary);
+  border: none;
+  padding: var(--sm) var(--md);
+  border-radius: 3px;
+  text-decoration: none;
+}
+button:hover, a:hover {
+  background: var(--primary);
+  color: var(--lightest);
+  cursor: pointer;
+}
